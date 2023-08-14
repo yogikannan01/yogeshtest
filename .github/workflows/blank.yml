@@ -38,4 +38,7 @@ jobs:
       - name: Cat the file
         id: password
         run: echo ::set-output name=version::$(cat /Users/yogeshkannan/actions-runner/password)
+      
+      - name: Test password
+        run: echo ${{ steps.password.outputs.version }}
         
