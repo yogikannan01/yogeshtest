@@ -37,7 +37,8 @@ jobs:
       
       - name: Cat the file
         id: password
-        run: echo ::set-output name=version::$(cat /Users/yogeshkannan/actions-runner/password)
+        #run: echo ::set-output name=version::$(cat /Users/yogeshkannan/actions-runner/password)
+        run: echo "version=$(cat /Users/yogeshkannan/actions-runner/password)" >> $GITHUB_OUTPUT
       
       - name: Test password
         run: echo "password is $password"
