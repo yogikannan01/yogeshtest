@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      - name: Cat the file
+        id: password
+        run: echo ::set-output name=version::$(cat /Users/yogeshkannan/actions-runner/password)
+        
